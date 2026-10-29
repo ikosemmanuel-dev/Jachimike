@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Jachimike Michael Onwuchekwa</title>
+<meta name="description" content="Get in touch with Jachimike Michael Onwuchekwa about opportunities, technical conversations, collaborations or research.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
+<style>
+/* ===== BASE (identical on every page) ===== */
+:root{--bg:#080b10;--panel:#0e131b;--panel-light:#121a24;--text:#eef3f8;--muted:#8b98a8;--line:rgba(180,204,225,.13);--accent:#71f5c2;--blue:#75a7ff;--font:"Manrope",sans-serif;--mono:"DM Mono",monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+::selection{background:var(--accent);color:#07100d}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.site-shell{overflow:hidden}
+.section,.navbar,.footer{width:min(1180px,calc(100% - 64px));margin-inline:auto}
+.navbar{min-height:86px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);position:relative;z-index:10}
+.brand{display:inline-flex;align-items:center;gap:11px;font-size:12px;letter-spacing:1.5px;font-weight:800}
+.brand-mark{display:grid;place-items:center;width:35px;height:35px;color:var(--accent);border:1px solid rgba(113,245,194,.5);font-family:var(--mono);font-size:12px;letter-spacing:-1px}
+.muted{color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:35px;color:#aeb8c5;font-size:12px}
+.nav-links a{transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-links .nav-cta{border:1px solid var(--line);padding:12px 15px;color:var(--text)}
+.nav-links .nav-cta:hover,.nav-links .nav-cta.active{border-color:var(--accent);color:var(--accent)}
+.nav-cta span{color:var(--accent);margin-left:12px}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 12px;cursor:pointer}
+.eyebrow{color:var(--accent);font:10px var(--mono);letter-spacing:2px;line-height:1.8;margin:0}
+.gradient-text{color:var(--accent);background:linear-gradient(110deg,#8dffcb 5%,#74d9ff 90%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.button{min-height:48px;display:inline-flex;justify-content:center;align-items:center;gap:25px;padding:0 19px;font-size:12px;font-weight:700;transition:transform .2s,background .2s,border-color .2s}
+.button:hover{transform:translateY(-3px)}
+.button-primary{background:var(--accent);color:#07120e}
+.button-primary:hover{background:#a0ffd9}
+.button-secondary{border:1px solid var(--line);color:var(--text)}
+.button-secondary:hover{border-color:var(--accent)}
+.text-link{display:inline-flex;gap:22px;margin-top:18px;padding-bottom:8px;border-bottom:1px solid rgba(113,245,194,.35);color:var(--accent);font-size:11px;transition:color .2s}
+.text-link:hover{color:#a0ffd9}
+.page-hero{padding:90px 0 80px;border-bottom:1px solid var(--line)}
+.crumbs{font:9px var(--mono);letter-spacing:1.2px;color:#758494;margin:0 0 30px}
+.crumbs a:hover{color:var(--accent)}
+.page-hero h1{font-size:clamp(42px,6vw,72px);line-height:1.1;letter-spacing:-3.5px;margin:16px 0 24px;font-weight:700;max-width:900px}
+.page-lead{max-width:620px;font-size:15px;line-height:2;color:#a5b0bd;margin:0}
+.block{padding:100px 0}
+.block-alt{border-block:1px solid var(--line);background:linear-gradient(180deg,#0b1017,#090d13)}
+.section-heading{max-width:700px;margin-bottom:45px}
+.section-heading h2{font-size:clamp(32px,4.5vw,50px);letter-spacing:-2.3px;line-height:1.17;font-weight:600;margin:15px 0 0}
+.card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.card-grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.card-grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.card{position:relative;padding:24px 21px 28px;border:1px solid var(--line);background:rgba(16,23,32,.6);transition:transform .25s,border-color .25s,background .25s}
+.card:hover{transform:translateY(-5px);border-color:rgba(113,245,194,.5);background:#101a20}
+.card-top{display:flex;justify-content:space-between;align-items:center}
+.card-num{color:#71808d;font:10px var(--mono)}
+.card-icon{color:var(--accent);font-size:23px}
+.card h3{margin:30px 0 12px;font-size:16px;font-weight:600;line-height:1.5}
+.card p{font-size:12px;line-height:1.9;color:var(--muted);margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+.tags span{padding:6px 7px;color:#a6b5c0;border:1px solid var(--line);font:8px var(--mono)}
+.cta-band{position:relative;border-top:1px solid var(--line);background:radial-gradient(ellipse at 50% 100%,rgba(39,91,77,.2),transparent 60%),#0b1117;overflow:hidden}
+.cta-inner{position:relative;padding:90px 0;text-align:center}
+.cta-inner h2{font-size:clamp(34px,5vw,56px);letter-spacing:-2.5px;line-height:1.15;font-weight:600;margin:15px 0 0}
+.cta-inner p{max-width:470px;margin:22px auto 26px;color:var(--muted);font-size:13px;line-height:2}
+.cta-inner .button{position:relative;z-index:2}
+.deco{position:absolute;border:1px solid rgba(113,245,194,.08);border-radius:50%;pointer-events:none}
+.deco-one{width:390px;height:390px;left:-190px;bottom:-260px}
+.deco-two{width:500px;height:500px;right:-280px;top:-300px}
+.footer{display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding-top:27px;padding-bottom:27px}
+.footer-note,.back-top,.copyright{font:8px var(--mono);letter-spacing:.7px;color:#73808e}
+.footer-note{margin-left:auto}
+.back-top{color:var(--accent)}
+.copyright{width:100%;border-top:1px solid var(--line);padding-top:20px}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (max-width:950px){
+  .card-grid,.card-grid.cols-3{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .section,.navbar,.footer{width:calc(100% - 36px)}
+  .navbar{min-height:72px}
+  .menu-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:71px;left:-18px;right:-18px;background:#0d131b;border-bottom:1px solid var(--line);padding:20px;flex-direction:column;align-items:stretch;gap:0}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:15px 5px}
+  .nav-links .nav-cta{margin-top:8px;padding:13px}
+  .page-hero{padding:60px 0 55px}
+  .page-hero h1{letter-spacing:-2.5px}
+  .block{padding:70px 0}
+  .card-grid,.card-grid.cols-3,.card-grid.cols-2{grid-template-columns:1fr}
+  .cta-inner{padding:70px 0}
+  .footer{gap:18px}
+  .footer-note{display:none}
+  .back-top{margin-left:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+/* ===== CONTACT PAGE ONLY ===== */
+.contact-hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 100%,rgba(39,91,77,.2),transparent 60%),#0b1117}
+.contact-hero .section{position:relative;z-index:2}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.reasons{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.reasons li{padding:22px 0;border-bottom:1px solid var(--line)}
+.reasons b{display:block;font-size:16px;font-weight:600;margin-bottom:6px}
+.reasons span{font-size:12px;line-height:1.9;color:var(--muted)}
+.link-list{display:grid;gap:13px}
+.link-card{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 22px;border:1px solid var(--line);background:rgba(16,23,32,.6);transition:transform .25s,border-color .25s,background .25s}
+.link-card:hover{transform:translateY(-3px);border-color:rgba(113,245,194,.5);background:#101a20}
+.link-card small{display:block;font:9px var(--mono);letter-spacing:1.2px;color:var(--accent);margin-bottom:8px}
+.link-card strong{font-size:15px;font-weight:600;word-break:break-all}
+.link-card .arrow{color:var(--accent);font-size:20px}
+.copy-btn{margin-top:13px;background:none;border:1px solid var(--line);color:#a6b5c0;font:9px var(--mono);letter-spacing:1px;padding:12px 16px;cursor:pointer;transition:border-color .2s,color .2s}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+.location{margin-top:30px;font:10px var(--mono);letter-spacing:1px;color:#758494;line-height:1.9}
+@media (max-width:950px){.contact-grid{gap:45px;grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="site-shell" id="top">
+  <nav class="navbar">
+    <a class="brand" href="jachi.html"><span class="brand-mark">JM</span><span>JACHIMIKE<span class="muted">.DEV</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="about-jachi.html">About</a>
+      <a href="jachi-expertise.html">Expertise</a>
+      <a href="jachi-journey.html">Journey</a>
+      <a href="contact-jachi.html" class="nav-cta active" aria-current="page">Let's connect <span>↗</span></a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-hero contact-hero">
+      <div class="section">
+        <p class="crumbs"><a href="jachi.html">HOME</a> / CONTACT</p>
+        <p class="eyebrow">04 / YOUR NEXT CONVERSATION STARTS HERE</p>
+        <h1>Let's make technology work <span class="gradient-text">better.</span></h1>
+        <p class="page-lead">Have an opportunity, a technical conversation or a project in mind? I'd be glad to connect.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="mailto:onwuchekwamichael@gmail.com">Email me <span>↗</span></a>
+          <a class="button button-secondary" href="jachi-journey.html">View my journey <span>→</span></a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section block">
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="section-heading" style="margin-bottom:30px">
+            <p class="eyebrow">GOOD REASONS TO REACH OUT</p>
+            <h2>What we could <span class="gradient-text">talk about.</span></h2>
+          </div>
+          <ul class="reasons">
+            <li><b>Job &amp; contract opportunities</b><span>Roles in cloud, DevOps, network engineering or UNIX administration.</span></li>
+            <li><b>Technical conversations</b><span>Infrastructure design, automation, reliability and resilience.</span></li>
+            <li><b>Collaborations &amp; research</b><span>Secure cloud, information networking, distributed systems and digital-health platforms.</span></li>
+            <li><b>Product &amp; startup ideas</b><span>Including the work I'm doing at MINDNAN.</span></li>
+          </ul>
+        </div>
+
+        <div class="reveal">
+          <div class="section-heading" style="margin-bottom:30px">
+            <p class="eyebrow">FIND ME ONLINE</p>
+            <h2>Direct <span class="gradient-text">links.</span></h2>
+          </div>
+          <div class="link-list">
+            <a class="link-card" href="mailto:onwuchekwamichael@gmail.com">
+              <span><small>EMAIL</small><strong>onwuchekwamichael@gmail.com</strong></span><span class="arrow">↗</span>
+            </a>
+            <a class="link-card" href="https://github.com/jachiwayne3" target="_blank" rel="noopener noreferrer">
+              <span><small>GITHUB</small><strong>github.com/jachiwayne3</strong></span><span class="arrow">↗</span>
+            </a>
+            <!-- LinkedIn link goes here: replace LINKEDIN-USERNAME-GOES-HERE with the real profile name -->
+            <a class="link-card" href="https://www.linkedin.com/in/jachimike-onwuchekwa-61029017b/" target="_blank" rel="noopener noreferrer">
+              <span><small>LINKEDIN</small><strong>My LinkedIn</strong></span><span class="arrow">↗</span>
+            </a>
+          </div>
+          <button class="copy-btn" id="copyEmail" type="button">COPY EMAIL ADDRESS</button>
+          <p class="location">BASED IN LAGOS, NIGERIA<br>LANGUAGE: ENGLISH</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="jachi.html"><span class="brand-mark">JM</span><span>JACHIMIKE<span class="muted">.DEV</span></span></a>
+    <span class="footer-note">DESIGNED AROUND SYSTEMS THINKING.</span>
+    <a href="#top" class="back-top">BACK TO TOP ↑</a>
+    <span class="copyright">© <span id="year"></span> Jachimike Michael Onwuchekwa</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var t=document.getElementById("menuToggle"),n=document.getElementById("navLinks");
+  if(t&&n){t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",String(o));t.textContent=o?"✕":"☰"})}
+  var y=document.getElementById("year");if(y)y.textContent=new Date().getFullYear();
+  var items=document.querySelectorAll(".reveal");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+    items.forEach(function(el){io.observe(el)});
+  }else{items.forEach(function(el){el.classList.add("in")})}
+
+  var c=document.getElementById("copyEmail");
+  if(c){
+    c.addEventListener("click",function(){
+      var email="onwuchekwamichael@gmail.com";
+      function done(){c.textContent="COPIED ✓";setTimeout(function(){c.textContent="COPY EMAIL ADDRESS"},2000)}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(email).then(done,function(){window.location.href="mailto:"+email})}
+      else{window.location.href="mailto:"+email}
+    });
+  }
+})();
+</script>
+</body>
+</html>

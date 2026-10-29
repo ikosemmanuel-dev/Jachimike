@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journey | Jachimike Michael Onwuchekwa</title>
+<meta name="description" content="Professional journey of Jachimike Michael Onwuchekwa: MINDNAN co-founder, IBM network engineer and UNIX administrator at BluDive Technologies, graduate intern, and consultant.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
+<style>
+/* ===== BASE (identical on every page) ===== */
+:root{--bg:#080b10;--panel:#0e131b;--panel-light:#121a24;--text:#eef3f8;--muted:#8b98a8;--line:rgba(180,204,225,.13);--accent:#71f5c2;--blue:#75a7ff;--font:"Manrope",sans-serif;--mono:"DM Mono",monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+::selection{background:var(--accent);color:#07100d}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.site-shell{overflow:hidden}
+.section,.navbar,.footer{width:min(1180px,calc(100% - 64px));margin-inline:auto}
+.navbar{min-height:86px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);position:relative;z-index:10}
+.brand{display:inline-flex;align-items:center;gap:11px;font-size:12px;letter-spacing:1.5px;font-weight:800}
+.brand-mark{display:grid;place-items:center;width:35px;height:35px;color:var(--accent);border:1px solid rgba(113,245,194,.5);font-family:var(--mono);font-size:12px;letter-spacing:-1px}
+.muted{color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:35px;color:#aeb8c5;font-size:12px}
+.nav-links a{transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-links .nav-cta{border:1px solid var(--line);padding:12px 15px;color:var(--text)}
+.nav-links .nav-cta:hover,.nav-links .nav-cta.active{border-color:var(--accent);color:var(--accent)}
+.nav-cta span{color:var(--accent);margin-left:12px}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 12px;cursor:pointer}
+.eyebrow{color:var(--accent);font:10px var(--mono);letter-spacing:2px;line-height:1.8;margin:0}
+.gradient-text{color:var(--accent);background:linear-gradient(110deg,#8dffcb 5%,#74d9ff 90%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.button{min-height:48px;display:inline-flex;justify-content:center;align-items:center;gap:25px;padding:0 19px;font-size:12px;font-weight:700;transition:transform .2s,background .2s,border-color .2s}
+.button:hover{transform:translateY(-3px)}
+.button-primary{background:var(--accent);color:#07120e}
+.button-primary:hover{background:#a0ffd9}
+.button-secondary{border:1px solid var(--line);color:var(--text)}
+.button-secondary:hover{border-color:var(--accent)}
+.text-link{display:inline-flex;gap:22px;margin-top:18px;padding-bottom:8px;border-bottom:1px solid rgba(113,245,194,.35);color:var(--accent);font-size:11px;transition:color .2s}
+.text-link:hover{color:#a0ffd9}
+.page-hero{padding:90px 0 80px;border-bottom:1px solid var(--line)}
+.crumbs{font:9px var(--mono);letter-spacing:1.2px;color:#758494;margin:0 0 30px}
+.crumbs a:hover{color:var(--accent)}
+.page-hero h1{font-size:clamp(42px,6vw,72px);line-height:1.1;letter-spacing:-3.5px;margin:16px 0 24px;font-weight:700;max-width:900px}
+.page-lead{max-width:620px;font-size:15px;line-height:2;color:#a5b0bd;margin:0}
+.block{padding:100px 0}
+.block-alt{border-block:1px solid var(--line);background:linear-gradient(180deg,#0b1017,#090d13)}
+.section-heading{max-width:700px;margin-bottom:45px}
+.section-heading h2{font-size:clamp(32px,4.5vw,50px);letter-spacing:-2.3px;line-height:1.17;font-weight:600;margin:15px 0 0}
+.card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.card-grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.card-grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.card{position:relative;padding:24px 21px 28px;border:1px solid var(--line);background:rgba(16,23,32,.6);transition:transform .25s,border-color .25s,background .25s}
+.card:hover{transform:translateY(-5px);border-color:rgba(113,245,194,.5);background:#101a20}
+.card-top{display:flex;justify-content:space-between;align-items:center}
+.card-num{color:#71808d;font:10px var(--mono)}
+.card-icon{color:var(--accent);font-size:23px}
+.card h3{margin:30px 0 12px;font-size:16px;font-weight:600;line-height:1.5}
+.card p{font-size:12px;line-height:1.9;color:var(--muted);margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+.tags span{padding:6px 7px;color:#a6b5c0;border:1px solid var(--line);font:8px var(--mono)}
+.cta-band{position:relative;border-top:1px solid var(--line);background:radial-gradient(ellipse at 50% 100%,rgba(39,91,77,.2),transparent 60%),#0b1117;overflow:hidden}
+.cta-inner{position:relative;padding:90px 0;text-align:center}
+.cta-inner h2{font-size:clamp(34px,5vw,56px);letter-spacing:-2.5px;line-height:1.15;font-weight:600;margin:15px 0 0}
+.cta-inner p{max-width:470px;margin:22px auto 26px;color:var(--muted);font-size:13px;line-height:2}
+.cta-inner .button{position:relative;z-index:2}
+.deco{position:absolute;border:1px solid rgba(113,245,194,.08);border-radius:50%;pointer-events:none}
+.deco-one{width:390px;height:390px;left:-190px;bottom:-260px}
+.deco-two{width:500px;height:500px;right:-280px;top:-300px}
+.footer{display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding-top:27px;padding-bottom:27px}
+.footer-note,.back-top,.copyright{font:8px var(--mono);letter-spacing:.7px;color:#73808e}
+.footer-note{margin-left:auto}
+.back-top{color:var(--accent)}
+.copyright{width:100%;border-top:1px solid var(--line);padding-top:20px}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (max-width:950px){
+  .card-grid,.card-grid.cols-3{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .section,.navbar,.footer{width:calc(100% - 36px)}
+  .navbar{min-height:72px}
+  .menu-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:71px;left:-18px;right:-18px;background:#0d131b;border-bottom:1px solid var(--line);padding:20px;flex-direction:column;align-items:stretch;gap:0}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:15px 5px}
+  .nav-links .nav-cta{margin-top:8px;padding:13px}
+  .page-hero{padding:60px 0 55px}
+  .page-hero h1{letter-spacing:-2.5px}
+  .block{padding:70px 0}
+  .card-grid,.card-grid.cols-3,.card-grid.cols-2{grid-template-columns:1fr}
+  .cta-inner{padding:70px 0}
+  .footer{gap:18px}
+  .footer-note{display:none}
+  .back-top{margin-left:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+/* ===== JOURNEY PAGE ONLY ===== */
+.timeline{border-top:1px solid var(--line)}
+.timeline-item{display:grid;grid-template-columns:25px 180px 1fr 35px;gap:20px;padding:36px 0;border-bottom:1px solid var(--line);align-items:start}
+.timeline-marker{display:flex;justify-content:center;padding-top:5px}
+.timeline-marker span{width:9px;height:9px;background:var(--accent);border-radius:50%;box-shadow:0 0 13px rgba(113,245,194,.35)}
+.timeline-date{font:9px var(--mono);color:#93a2af;padding-top:3px;line-height:1.8}
+.timeline-type{color:var(--accent);font:8px var(--mono);letter-spacing:1px}
+.timeline-content h3{font-size:20px;font-weight:600;margin:8px 0;line-height:1.35}
+.timeline-content p{font-size:12px;line-height:1.9;color:var(--muted);margin:7px 0}
+.timeline-content .timeline-org{color:#d2dbe3}
+.timeline-content ul{list-style:none;padding:0;margin:14px 0 0;max-width:720px}
+.timeline-content li{position:relative;padding:6px 0 6px 18px;font-size:12px;line-height:1.9;color:var(--muted)}
+.timeline-content li::before{content:"›";position:absolute;left:0;color:var(--accent)}
+.timeline-index{font:10px var(--mono);color:#536271;text-align:right}
+@media (max-width:640px){
+  .timeline-item{grid-template-columns:15px 1fr 25px;gap:12px;padding:28px 0}
+  .timeline-date{grid-column:2;grid-row:1}
+  .timeline-marker{grid-column:1;grid-row:1 / span 2}
+  .timeline-content{grid-column:2;grid-row:2}
+  .timeline-index{grid-column:3;grid-row:1}
+  .timeline-content h3{font-size:17px}
+}
+</style>
+</head>
+<body>
+<div class="site-shell" id="top">
+  <nav class="navbar">
+    <a class="brand" href="jachi.html"><span class="brand-mark">JM</span><span>JACHIMIKE<span class="muted">.DEV</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="about-jachi.html">About</a>
+      <a href="jachi-expertise.html">Expertise</a>
+      <a href="jachi-journey.html" class="active" aria-current="page">Journey</a>
+      <a href="contact-jachi.html" class="nav-cta">Let's connect <span>↗</span></a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-hero section">
+      <p class="crumbs"><a href="jachi.html">HOME</a> / JOURNEY</p>
+      <p class="eyebrow">03 / PROFESSIONAL JOURNEY</p>
+      <h1>Experience that keeps me <span class="gradient-text">moving forward.</span></h1>
+      <p class="page-lead">From a graduate internship to enterprise infrastructure work and a startup of my own, a path built on hands-on learning.</p>
+    </header>
+
+    <section class="section block">
+      <div class="timeline">
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-date">2026 — PRESENT</div>
+          <div class="timeline-content">
+            <span class="timeline-type">FOUNDER</span>
+            <h3>Co-Founder / Technology and Product Strategy</h3>
+            <p class="timeline-org">MINDNAN · Lagos, Nigeria</p>
+            <p>Co-founded a therapist discovery, payment and booking platform that simplifies access to culturally relevant mental-health support in Nigeria.</p>
+            <ul>
+              <li>Help define product workflows: therapist application and verification, patient discovery, transparent pricing, payment-before-booking, scheduling, vouchers, dashboards and session history.</li>
+              <li>Contribute to a lean technical strategy using Django REST Framework, PostgreSQL, a responsive frontend, basic CI/CD and cost-conscious hosting.</li>
+              <li>Plan a roadmap toward observability, automation, cloud optimization, Kubernetes/OpenShift, security and compliance.</li>
+              <li>Translate healthcare trust, operational and user-experience requirements into practical product and infrastructure decisions.</li>
+            </ul>
+          </div>
+          <span class="timeline-index">01</span>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-date">NOV 2024 — PRESENT</div>
+          <div class="timeline-content">
+            <span class="timeline-type">PROFESSIONAL EXPERIENCE</span>
+            <h3>IBM Network Engineer / UNIX Administrator (Technical Executive)</h3>
+            <p class="timeline-org">BluDive Technologies, IBM Gold Partner · Lagos, Nigeria</p>
+            <ul>
+              <li>Design, deploy, administer and troubleshoot enterprise infrastructure across routing and switching, VPNs, firewalls, UNIX/Linux, virtualization, storage, cloud and DevOps environments.</li>
+              <li>Administer IBM AIX and Red Hat Enterprise Linux systems, including access control, patching, upgrades, filesystem and storage operations, performance checks and incident troubleshooting.</li>
+              <li>Support IBM Power environments involving PowerVC, PowerVM, VIOS, HMC, firmware and microcode activities, backup planning and lifecycle operations.</li>
+              <li>Implement automation and CI/CD workflows with Ansible, Jenkins, Kubernetes, Docker, Terraform and GitHub-based pipelines.</li>
+              <li>Contribute to availability and resilience initiatives across containerized applications, messaging platforms, databases, networking and hybrid cloud.</li>
+            </ul>
+          </div>
+          <span class="timeline-index">02</span>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-date">JUN 2024 — NOV 2024</div>
+          <div class="timeline-content">
+            <span class="timeline-type">EARLY CAREER</span>
+            <h3>Graduate Intern</h3>
+            <p class="timeline-org">BluDive Technologies, IBM Gold Partner · Lagos, Nigeria</p>
+            <p>Intensive practical training and project work in networking, VMware virtualization, Microsoft Azure, Linux, DevOps, databases and enterprise infrastructure support. The internship led to a full-time technical role.</p>
+          </div>
+          <span class="timeline-index">03</span>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-date">MAY 2022 — PRESENT</div>
+          <div class="timeline-content">
+            <span class="timeline-type">CONSULTING EXPERIENCE · PART-TIME</span>
+            <h3>Project Manager / Marketing Consultant</h3>
+            <p class="timeline-org">Opticlass Eyewear and Eye Clinic · Nigeria</p>
+            <p>Coordinate marketing projects, client initiatives, content direction and stakeholder engagement, strengthening cross-functional leadership and communication skills.</p>
+          </div>
+          <span class="timeline-index">04</span>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-date">NOV 2021</div>
+          <div class="timeline-content">
+            <span class="timeline-type">EDUCATION</span>
+            <h3>BSc Education (Adult Education / Economics and Statistics)</h3>
+            <p class="timeline-org">University of Benin · Benin City, Edo State, Nigeria</p>
+            <p>Interdisciplinary training combining economics, statistics, education, communication and applied problem-solving.</p>
+          </div>
+          <span class="timeline-index">05</span>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="section cta-inner">
+        <p class="eyebrow">WHAT'S NEXT</p>
+        <h2>Let's build the <span class="gradient-text">next chapter.</span></h2>
+        <p>Open to opportunities, collaborations and technical conversations.</p>
+        <a class="button button-primary" href="contact-jachi.html">Let's connect <span>↗</span></a>
+        <div class="deco deco-one"></div><div class="deco deco-two"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="jachi.html"><span class="brand-mark">JM</span><span>JACHIMIKE<span class="muted">.DEV</span></span></a>
+    <span class="footer-note">DESIGNED AROUND SYSTEMS THINKING.</span>
+    <a href="#top" class="back-top">BACK TO TOP ↑</a>
+    <span class="copyright">© <span id="year"></span> Jachimike Michael Onwuchekwa</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var t=document.getElementById("menuToggle"),n=document.getElementById("navLinks");
+  if(t&&n){t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",String(o));t.textContent=o?"✕":"☰"})}
+  var y=document.getElementById("year");if(y)y.textContent=new Date().getFullYear();
+  var items=document.querySelectorAll(".reveal");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+    items.forEach(function(el){io.observe(el)});
+  }else{items.forEach(function(el){el.classList.add("in")})}
+})();
+</script>
+</body>
+</html>
